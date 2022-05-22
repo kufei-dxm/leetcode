@@ -1,5 +1,7 @@
 package com.leetcode.common;
 
+import java.util.List;
+
 import org.junit.Test;
 
 /**
@@ -45,9 +47,27 @@ public class Utils {
         return null;
     }
 
+    public static ListNode buildListNode(int[] nums) {
+        ListNode head = new ListNode(nums[0]);
+        ListNode temp = head;
+        for (int i = 1; i < nums.length; i++) {
+            ListNode node = new ListNode(nums[i]);
+            head.next = node;
+            head = node;
+        }
+        return temp;
+    }
+
     @Test
     public void testBuildTree() {
         int[] nums = new int[] {5, 1, 4, 0, 0, 3, 6};
         TreeNode tree = buildTree(nums);
+    }
+
+    @Test
+    public void testBuildList() {
+        int[] list = new int[] {4, 5, 1, 9};
+        ListNode listNode = buildListNode(list);
+
     }
 }
