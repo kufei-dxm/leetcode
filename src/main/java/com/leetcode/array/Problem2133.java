@@ -41,10 +41,7 @@ public class Problem2133 {
                 set.add(matrix[i][j] + "in row" + j);
             }
         }
-        if (set.size() != matrix.length * matrix.length * 2) {
-            return false;
-        }
-        return true;
+        return set.size() == matrix.length * matrix.length * 2;
     }
 
     /**
@@ -75,9 +72,7 @@ public class Problem2133 {
             cols.put(i, col);
         } else {
             Set<Integer> col = cols.get(i);
-            if (!col.add(cell)) {
-                return true;
-            }
+            return !col.add(cell);
         }
         return false;
     }
