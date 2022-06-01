@@ -1,4 +1,4 @@
-package com.leetcode.array;
+package com.leetcode.dp;
 
 import org.junit.Assert;
 import org.junit.Before;
