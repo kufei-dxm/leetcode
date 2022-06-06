@@ -58,6 +58,18 @@ public class Utils {
         return temp;
     }
 
+    public static void printListNode(ListNode head) {
+        while (head != null) {
+            if (head.next == null) {
+                System.out.print(head.val);
+            } else {
+                System.out.print(head.val + " -> ");
+            }
+            head = head.next;
+        }
+        System.out.println();
+    }
+
     @Test
     public void testBuildTree() {
         int[] nums = new int[] {5, 1, 4, 0, 0, 3, 6};

@@ -1,7 +1,6 @@
-package com.leetcode.string;
+package com.leetcode.math;
 
 import java.util.ArrayList;
-import java.util.BitSet;
 import java.util.List;
 
 import org.junit.Before;
