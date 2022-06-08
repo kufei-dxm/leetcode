@@ -10,6 +10,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
+ * 94. Binary Tree Inorder Traversal
  * @author kufei.dxm
  * @date 2022/5/26
  */
@@ -41,13 +42,13 @@ public class Problem94 {
         List<Integer> res = new ArrayList<>();
         stack.push(root);
         while (!stack.isEmpty()) {
-            while (null != root) {
+            while (null != root) {//左子树
                 stack.push(root.left);
                 root = root.left;
             }
             root = stack.pop();
-            res.add(root.val);
-            root = root.right;
+            res.add(root.val); //节点
+            root = root.right; //右子树
         }
         return res;
     }

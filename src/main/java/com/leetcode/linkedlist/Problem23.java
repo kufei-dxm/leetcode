@@ -1,9 +1,5 @@
 package com.leetcode.linkedlist;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 import com.leetcode.common.ListNode;
 import com.leetcode.common.Utils;
 import org.junit.Before;
