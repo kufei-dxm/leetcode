@@ -7,7 +7,7 @@ import org.junit.Test;
 
 /**
  * 146. LRU Cache
- *
+ * 双向链表+Map
  * @author kufei.dxm
  * @date 2022/5/31
  */
