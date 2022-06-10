@@ -1,7 +1,7 @@
 package com.leetcode.linkedlist;
 
 import com.leetcode.common.ListNode;
-import com.leetcode.common.Utils;
+import com.leetcode.common.ListUtils;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -63,11 +63,11 @@ public class Problem23 {
 
     @Test
     public void test() {
-        ListNode l1 = Utils.buildListNode(new int[] {1, 4, 5});
-        ListNode l2 = Utils.buildListNode(new int[] {1, 3, 4});
-        ListNode l3 = Utils.buildListNode(new int[] {2, 6});
+        ListNode l1 = ListUtils.buildListNode(new int[] {1, 4, 5});
+        ListNode l2 = ListUtils.buildListNode(new int[] {1, 3, 4});
+        ListNode l3 = ListUtils.buildListNode(new int[] {2, 6});
         ListNode[] list = new ListNode[] {l1, l2, l3};
         ListNode result = solution.mergeKLists(list);
-        Utils.printListNode(result);
+        ListUtils.printListNode(result);
     }
 }

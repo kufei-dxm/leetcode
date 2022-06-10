@@ -1,7 +1,7 @@
 package com.leetcode.linkedlist;
 
 import com.leetcode.common.ListNode;
-import com.leetcode.common.Utils;
+import com.leetcode.common.ListUtils;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -39,9 +39,9 @@ public class Problem206 {
 
     @Test
     public void test() {
-        ListNode head = Utils.buildListNode(new int[] {1, 2, 3, 4, 5});
-        Utils.printListNode(head);
+        ListNode head = ListUtils.buildListNode(new int[] {1, 2, 3, 4, 5});
+        ListUtils.printListNode(head);
         ListNode reversed = solution.reverseList(head);
-        Utils.printListNode(reversed);
+        ListUtils.printListNode(reversed);
     }
 }

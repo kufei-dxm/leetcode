@@ -1,9 +1,7 @@
 package com.leetcode.linkedlist;
 
-import java.util.List;
-
 import com.leetcode.common.ListNode;
-import com.leetcode.common.Utils;
+import com.leetcode.common.ListUtils;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -51,7 +49,7 @@ public class Problem234 {
 
     @Test
     public void test() {
-        ListNode head = Utils.buildListNode(new int[] {   1});
+        ListNode head = ListUtils.buildListNode(new int[] {   1});
         boolean ret = solution.isPalindrome(head);
         Assert.assertTrue(ret);
     }

@@ -1,7 +1,7 @@
 package com.leetcode.linkedlist;
 
 import com.leetcode.common.ListNode;
-import com.leetcode.common.Utils;
+import com.leetcode.common.ListUtils;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -53,14 +53,14 @@ public class Problem328 {
 
     @Test
     public void test() {
-        ListNode head = Utils.buildListNode(new int[] {1, 2, 3, 4, 5});
-        Utils.printListNode(head);
+        ListNode head = ListUtils.buildListNode(new int[] {1, 2, 3, 4, 5});
+        ListUtils.printListNode(head);
         ListNode newHead = solution.oddEvenList(head);
-        Utils.printListNode(newHead);
+        ListUtils.printListNode(newHead);
 
-        head = Utils.buildListNode(new int[] {2, 1, 3, 5, 6, 4, 7});
-        Utils.printListNode(head);
+        head = ListUtils.buildListNode(new int[] {2, 1, 3, 5, 6, 4, 7});
+        ListUtils.printListNode(head);
         newHead = solution.oddEvenList(head);
-        Utils.printListNode(newHead);
+        ListUtils.printListNode(newHead);
     }
 }

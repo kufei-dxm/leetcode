@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Stack;
 
 import com.leetcode.common.TreeNode;
-import com.leetcode.common.Utils;
+import com.leetcode.common.TreeUtils;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -69,7 +69,7 @@ public class Problem94 {
     @Test
     public void test() {
         List<Integer> result = new ArrayList<>();
-        TreeNode tree = Utils.buildTree(new int[] {1, 0, 2, 0, 0, 3});
+        TreeNode tree = TreeUtils.buildTreeByLevelOrderArray(new int[] {1, 0, 2, 0, 0, 3});
         solution.traversal(result, tree);
         result.forEach(e -> System.out.print(e + " "));
     }

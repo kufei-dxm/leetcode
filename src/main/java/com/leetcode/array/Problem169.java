@@ -7,6 +7,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 /**
+ * 169. Majority Element
  * @author kufei.dxm
  * @date 2022/5/20
  */

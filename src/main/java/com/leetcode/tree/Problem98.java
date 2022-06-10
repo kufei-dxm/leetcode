@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.leetcode.common.TreeNode;
-import com.leetcode.common.Utils;
+import com.leetcode.common.TreeUtils;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -117,19 +117,19 @@ public class Problem98 {
     @Test
     public void test() {
         int[] nums = new int[] {5, 1, 4, 0, 0, 3, 6};
-        TreeNode root = Utils.buildTree(nums);
+        TreeNode root = TreeUtils.buildTreeByLevelOrderArray(nums);
         boolean isValid = isValidBST(root);
         Assert.assertFalse(isValid);
         Assert.assertFalse(isValidBSTV2(root));
 
         nums = new int[] {2, 1, 3};
-        root = Utils.buildTree(nums);
+        root = TreeUtils.buildTreeByLevelOrderArray(nums);
         isValid = isValidBST(root);
         Assert.assertTrue(isValid);
         Assert.assertTrue(isValidBSTV2(root));
 
         nums = new int[] {Integer.MAX_VALUE};
-        root = Utils.buildTree(nums);
+        root = TreeUtils.buildTreeByLevelOrderArray(nums);
         isValid = isValidBST(root);
         Assert.assertTrue(isValid);
         Assert.assertTrue(isValidBSTV2(root));

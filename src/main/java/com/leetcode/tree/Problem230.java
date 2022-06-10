@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.leetcode.common.TreeNode;
-import com.leetcode.common.Utils;
+import com.leetcode.common.TreeUtils;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -41,7 +41,7 @@ public class Problem230 {
     @Test
     public void test() {
         int[] treeNodes = new int[] {5, 3, 6, 2, 4, 0, 0, 1};
-        TreeNode tree = Utils.buildTree(treeNodes);
+        TreeNode tree = TreeUtils.buildTreeByLevelOrderArray(treeNodes);
         int result = kthSmallest(tree, 3);
         Assert.assertEquals(result, 3);
     }

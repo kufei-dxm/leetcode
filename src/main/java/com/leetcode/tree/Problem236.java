@@ -43,4 +43,31 @@ public class Problem236 {
             return false;
         }
     }
+
+    /**
+     * 核心还是寻找到p和q所在的子树
+     *
+     * @param root
+     * @param p
+     * @param q
+     * @return
+     */
+    public TreeNode lowestCommonAncestorV2(TreeNode root, TreeNode p, TreeNode q) {
+        //找到任意一个，则返回
+        if (root == null || root.val == p.val || root.val == q.val) {
+            return root;
+        }
+        //分别寻找左右子树
+        TreeNode left = lowestCommonAncestorV2(root.left, p, q);
+        TreeNode right = lowestCommonAncestorV2(root.right, p, q);
+        //如果左右都空，说明p/q在两颗子树上。公共祖先自然就是自己了。
+        if (left != null && right != null) {
+            return root;
+        }
+        if (left != null) {
+            return left;
+        } else {
+            return right;
+        }
+    }
 }

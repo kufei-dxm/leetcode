@@ -1,7 +1,7 @@
 package com.leetcode.linkedlist;
 
 import com.leetcode.common.ListNode;
-import com.leetcode.common.Utils;
+import com.leetcode.common.ListUtils;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -113,12 +113,12 @@ public class Problem148 {
 
     @Test
     public void test() {
-        ListNode list = Utils.buildListNode(new int[] {4, 2, 1, 3});
+        ListNode list = ListUtils.buildListNode(new int[] {4, 2, 1, 3});
         ListNode result = solution.sortList(list);
-        Utils.printListNode(result);
+        ListUtils.printListNode(result);
 
-        list = Utils.buildListNode(new int[] {-1, 5, 3, 4, 0});
+        list = ListUtils.buildListNode(new int[] {-1, 5, 3, 4, 0});
         result = solution.sortList(list);
-        Utils.printListNode(result);
+        ListUtils.printListNode(result);
     }
 }
