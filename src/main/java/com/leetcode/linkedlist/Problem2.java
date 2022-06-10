@@ -1,7 +1,7 @@
 package com.leetcode.linkedlist;
 
 import com.leetcode.common.ListNode;
-import com.leetcode.common.Utils;
+import com.leetcode.common.ListUtils;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -148,20 +148,20 @@ public class Problem2 {
 
     @Test
     public void test() {
-        ListNode l1 = Utils.buildListNode(new int[] {2, 4, 3});
-        ListNode l2 = Utils.buildListNode(new int[] {5, 6, 4});
+        ListNode l1 = ListUtils.buildListNode(new int[] {2, 4, 3});
+        ListNode l2 = ListUtils.buildListNode(new int[] {5, 6, 4});
         ListNode l3 = solution.addTwoNumbersV3(l1, l2);
-        Utils.printListNode(l3);
+        ListUtils.printListNode(l3);
 
         l3 = solution.addTwoNumbersV2(l1, l2);
-        Utils.printListNode(l3);
+        ListUtils.printListNode(l3);
 
-        l1 = Utils.buildListNode(new int[] {9, 9, 9, 9, 9, 9, 9});
-        l2 = Utils.buildListNode(new int[] {9, 9, 9, 9});
+        l1 = ListUtils.buildListNode(new int[] {9, 9, 9, 9, 9, 9, 9});
+        l2 = ListUtils.buildListNode(new int[] {9, 9, 9, 9});
         l3 = solution.addTwoNumbersV3(l1, l2);
-        Utils.printListNode(l3);
+        ListUtils.printListNode(l3);
 
         l3 = solution.addTwoNumbersV2(l1, l2);
-        Utils.printListNode(l3);
+        ListUtils.printListNode(l3);
     }
 }

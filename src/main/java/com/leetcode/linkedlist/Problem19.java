@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.leetcode.common.ListNode;
-import com.leetcode.common.Utils;
+import com.leetcode.common.ListUtils;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -71,11 +71,11 @@ public class Problem19 {
 
     @Test
     public void test() {
-        ListNode link = Utils.buildListNode(new int[] {1, 2, 3, 4, 5, 6, 7});
+        ListNode link = ListUtils.buildListNode(new int[] {1, 2, 3, 4, 5, 6, 7});
         ListNode node = solution.removeNthFromEndV2(link, 3);
 
-        node = solution.removeNthFromEndV2(Utils.buildListNode(new int[] {1}), 1);
-        node = solution.removeNthFromEnd(Utils.buildListNode(new int[] {1, 2}), 1);
-        node = solution.removeNthFromEnd(Utils.buildListNode(new int[] {1, 2}), 2);
+        node = solution.removeNthFromEndV2(ListUtils.buildListNode(new int[] {1}), 1);
+        node = solution.removeNthFromEnd(ListUtils.buildListNode(new int[] {1, 2}), 1);
+        node = solution.removeNthFromEnd(ListUtils.buildListNode(new int[] {1, 2}), 2);
     }
 }

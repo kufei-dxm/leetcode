@@ -1,7 +1,7 @@
 package com.leetcode.tree;
 
 import com.leetcode.common.TreeNode;
-import com.leetcode.common.Utils;
+import com.leetcode.common.TreeUtils;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -38,10 +38,10 @@ public class Problem101 {
     @Test
     public void test() {
         int[] tree = new int[] {1, 2, 2, 3, 4, 4, 3};
-        boolean result = solution.isSymmetric(Utils.buildTree(tree));
+        boolean result = solution.isSymmetric(TreeUtils.buildTreeByLevelOrderArray(tree));
         Assert.assertTrue(result);
         int[] tree2 = new int[] {1, 2, 2, 0, 3, 0, 3};
-        boolean result2 = solution.isSymmetric(Utils.buildTree(tree2));
+        boolean result2 = solution.isSymmetric(TreeUtils.buildTreeByLevelOrderArray(tree2));
         Assert.assertFalse(result2);
     }
 }
