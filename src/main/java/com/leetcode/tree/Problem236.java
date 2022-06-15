@@ -60,7 +60,7 @@ public class Problem236 {
         //分别寻找左右子树
         TreeNode left = lowestCommonAncestorV2(root.left, p, q);
         TreeNode right = lowestCommonAncestorV2(root.right, p, q);
-        //如果左右都空，说明p/q在两颗子树上。公共祖先自然就是自己了。
+        //如果左右都不为空，说明p/q在两颗子树上。公共祖先自然就是自己了。
         if (left != null && right != null) {
             return root;
         }
