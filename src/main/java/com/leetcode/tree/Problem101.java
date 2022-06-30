@@ -27,11 +27,11 @@ public class Problem101 {
     }
 
     public boolean isSymmetric(TreeNode left, TreeNode right) {
-        if ((null == left && null != right) || (null == right && null != left)) {
-            return false;
-        }
         if (null == left && null == right) {
             return true;
+        }
+        if (null == left || null == right) {
+            return false;
         }
         return (left.val == right.val) && isSymmetric(left.right, right.left) && isSymmetric(left.left, right.right);
     }
