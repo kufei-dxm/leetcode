@@ -18,6 +18,11 @@ public class Problem674 {
         solution = new Problem674();
     }
 
+    /**
+     *
+     * @param nums
+     * @return
+     */
     public int findLengthOfLCIS(int[] nums) {
         int maxLen = 1;
         int temp = 1;
