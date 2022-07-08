@@ -1,9 +1,7 @@
 package com.leetcode.tree;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
 
 import com.leetcode.common.Node;
 import org.junit.Before;

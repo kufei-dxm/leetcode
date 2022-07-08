@@ -47,6 +47,7 @@ public class Problem45 {
      * 参考55题 jump game 的反向遍历思路看看是否能优化.
      * 反向遍历 + 贪心思路
      * 讨论区里O（n）的贪心思路，理解起来不是太直观
+     *
      * @param nums
      * @return
      */
