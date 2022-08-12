@@ -1,16 +1,13 @@
 package com.leetcode.sort;
 
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
-
-import com.leetcode.common.Interval;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
-import org.omg.PortableInterceptor.INACTIVE;
-import sun.jvm.hotspot.runtime.InterpretedVFrame;
 
 /**
  * 56. Merge Intervals

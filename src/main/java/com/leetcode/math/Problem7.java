@@ -2,7 +2,6 @@ package com.leetcode.math;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import org.junit.Before;
 import org.junit.Test;
 
