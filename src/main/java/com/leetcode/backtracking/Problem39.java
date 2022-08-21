@@ -91,6 +91,8 @@ public class Problem39 {
     /**
      * 贪心式回溯，性能相当好。看了下讨论区里的[高票解法](https://leetcode.com/problems/combination-sum/discuss/1777569/FULL-EXPLANATION-WITH-STATE-SPACE-TREE-oror-Recursion-and-Backtracking-oror-Well-Explained-oror-C%2B%2B)
      * 性能远没这个好。。
+     * 相比这个解法（https://leetcode.com/problems/combination-sum-ii/discuss/16878/Combination-Sum-I-II-and-III-Java-solution-(see-the-similarities-yourself)），性能上也更优（减少了不必要的递归）。问题是代码不够简洁。
+     *
      * @param result
      * @param curComb
      * @param candidates
@@ -118,6 +120,29 @@ public class Problem39 {
             target += candidates[idx];
             findComb(result, curComb, candidates, idx + 1, target);
             freq--;
+        }
+    }
+
+    /**
+     * 常规DFS回溯更简单直观。第一个版本的实现其实有点问题的。
+     *
+     * @param result
+     * @param curComb
+     * @param candidates
+     * @param idx
+     * @param target
+     */
+    public void findCombV2(List<List<Integer>> result, List<Integer> curComb, int[] candidates, int idx, int target) {
+        if (target == 0) {
+            result.add(new ArrayList<>(curComb));
+        } else if (target < 0) {
+            return;
+        } else { //>0
+            for (int i = idx; i < candidates.length; i++) {
+                curComb.add(candidates[i]);
+                findCombV2(result, curComb, candidates, i, target - candidates[i]);
+                curComb.remove(curComb.size() - 1);//backtrack
+            }
         }
     }
 
