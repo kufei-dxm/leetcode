@@ -95,7 +95,7 @@ public class Problem47 {
             result.add(new ArrayList<>(curList));
         } else {
             for (int i = 0; i < nums.length; i++) {
-                if ((i < nums.length - 1 && nums[i] == nums[i + 1] && !used[i]) || used[i]) {
+                if ((i < nums.length - 1 && nums[i] == nums[i + 1] && !used[i + 1]) || used[i]) {
                     continue;
                 }
                 used[i] = true;
@@ -109,7 +109,7 @@ public class Problem47 {
 
     @Test
     public void test() {
-        int[] arr = new int[] {1, 2, 2};
+        int[] arr = new int[]{1, 1, 2};
         List<List<Integer>> result = solution.permuteUnique(arr);
         List<List<Integer>> resultV2 = solution.permuteUniqueV2(arr);
         result.forEach(e -> {

@@ -7,10 +7,11 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * 46. Permutations
+ * 46. Permutation
  *
  * @author kufei.dxm
  * @date 2022/5/27
+ * @see <a href="https://leetcode.com/problems/permutations/">leetcode-> 46. Permutations</a>
  */
 public class Problem46 {
     private Problem46 solution;
@@ -49,7 +50,7 @@ public class Problem46 {
     }
 
     /**
-     * 不需要临时变量
+     * 不需要临时变量。回溯的常规解法。
      *
      * @param result
      * @param prefix
@@ -70,13 +71,43 @@ public class Problem46 {
         }
     }
 
+    public void travelV3(List<List<Integer>> result, List<Integer> cur, int[] nums, boolean[] used) {
+        if (cur.size() == nums.length) {
+            result.add(new ArrayList<>(cur));
+            return;
+        }
+        for (int i = 0; i < nums.length; i++) {
+            if (used[i]) {
+                continue;
+            }
+            cur.add(nums[i]);
+            used[i] = true;
+            travelV3(result, cur, nums, used);
+            cur.remove(cur.size() - 1);
+            used[i] = false;
+        }
+    }
+
+    public List<List<Integer>> permuteV3(int[] nums) {
+        List<List<Integer>> result = new ArrayList<>();
+        travelV3(result, new ArrayList<>(), nums, new boolean[nums.length]);
+        return result;
+    }
+
     @Test
     public void test() {
-        List<List<Integer>> result = solution.permute(new int[] {1, 2, 3});
+        List<List<Integer>> result = solution.permute(new int[]{1, 2, 3});
         result.forEach(e -> {
-                e.forEach(f -> System.out.print(f + " "));
-                System.out.println();
-            }
+                    e.forEach(f -> System.out.print(f + " "));
+                    System.out.println();
+                }
+        );
+        System.out.println("===v3 solution ===");
+        result = solution.permuteV3(new int[]{1, 2, 3});
+        result.forEach(e -> {
+                    e.forEach(f -> System.out.print(f + " "));
+                    System.out.println();
+                }
         );
     }
 }

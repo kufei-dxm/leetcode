@@ -36,3 +36,17 @@
 * 还有经典的N皇后问题（估计太难，一般面试不好考到）；
 
 ### 题目解析
+##### 排列问题
+* [46. Permutation](https://leetcode.com/problems/permutations-ii/) . n全排列。终止条件和约束条件都很明确。写起来简单。（借助额外的数组也可以实现）
+* [47. Permutations II](https://leetcode.com/problems/permutations-ii/). 上题的进阶，可包含重复元素。如何减枝是关键。朴素的做法是在结果集和去重，不过效率太低。
+上题有借助额外数组的解法后，此题重复元素的跳过，会更容易想到。
+* [60. Permutation Sequence](https://leetcode.com/problems/permutation-sequence/).看着简单，套用46题的（有序）回溯 很容易解。但是此题作为Hard是
+有原因的。就是回溯会超时... 得通过排列组合的数学特性来解。
+
+##### 子集问题
+* [78. Subsets](https://leetcode.com/problems/subsets/). 和排列不同，子集没有元素顺序。因此不能和排列一样，每一轮回溯都遍历所有元素。通过分析例子，还是能比较容易想
+到递增序的解法（不同顺序的排列在这里是相同子集，需要绕开；为了绕开不同顺序的全排列，可想到此解法）。
+* [90. Subsets II](https://leetcode.com/problems/subsets-ii/). 上题的进阶，包含重复元素。关键点在于递增序中，判断该元素是否应该加入。通过分析例子，可知后续的重复
+元素应该绕过（前面相同元素求子集时已经包含）
+
+##### 组合问题
