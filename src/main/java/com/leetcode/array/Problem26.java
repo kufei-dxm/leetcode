@@ -7,6 +7,8 @@ import org.junit.Test;
 /**
  * @author kufei.dxm
  * @date 2022/5/29
+ * @title 26. Remove Duplicates from Sorted Array
+ * @link https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
  */
 public class Problem26 {
     private Problem26 solution;
