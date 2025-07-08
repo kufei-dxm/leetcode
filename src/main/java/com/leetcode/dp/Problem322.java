@@ -33,7 +33,7 @@ public class Problem322 {
         //凑足i的钱需要的最少的硬币数量
         int[] dp = new int[amount + 1];
         Arrays.fill(dp, 100000);
-        dp[0] = 0;
+        dp[0] = 0;//边界情况需要小心设计
         for (int i = 1; i < dp.length; i++) {
             for (int j = 0; j < coins.length; j++) {
                 if (coins[j] <= i) {

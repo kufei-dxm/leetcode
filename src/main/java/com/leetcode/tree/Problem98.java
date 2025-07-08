@@ -104,14 +104,14 @@ public class Problem98 {
         return isValidBST(root, Long.MIN_VALUE, Long.MAX_VALUE);
     }
 
-    private boolean isValidBST(TreeNode root, long minVal, long maxVal) {
+    private boolean isValidBST(TreeNode root, long minAllowVal, long maxAllowVal) {
         if (null == root) {
             return true;
         }
-        if (root.val <= minVal || root.val >= maxVal) {
+        if (root.val <= minAllowVal || root.val >= maxAllowVal) {
             return false;
         }
-        return isValidBST(root.left, minVal, root.val) && isValidBST(root.right, root.val, maxVal);
+        return isValidBST(root.left, minAllowVal, root.val) && isValidBST(root.right, root.val, maxAllowVal);
     }
 
     @Test

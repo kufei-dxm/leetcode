@@ -53,7 +53,7 @@ public class Problem24 {
      * @param head
      * @return
      */
-    public ListNode swapPairsV2(ListNode head) {
+    public ListNode swapPairsV2 (ListNode head) {
         ListNode dummy = new ListNode(0);
         dummy.next = head;
         ListNode current = dummy;
@@ -71,7 +71,7 @@ public class Problem24 {
     /**
      * 递归解法，更精简。。。
      */
-    public ListNode swapPairsV3(ListNode head) {
+    public ListNode swapPairsV3 (ListNode head) {
         if ((head == null) || (head.next == null)) {
             return head;
         }
@@ -86,7 +86,7 @@ public class Problem24 {
         int[] nums = new int[] {1, 2, 3, 4};
         ListNode listNode = ListUtils.buildListNode(nums);
         ListUtils.printListNode(listNode);
-        ListNode res = solution.swapPairs(listNode);
+        ListNode res = solution.swapPairsV3(listNode);
         ListUtils.printListNode(res);
     }
 }

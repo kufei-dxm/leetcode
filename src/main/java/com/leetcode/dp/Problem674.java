@@ -1,4 +1,4 @@
-package com.leetcode.array;
+package com.leetcode.dp;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -19,7 +19,6 @@ public class Problem674 {
     }
 
     /**
-     *
      * @param nums
      * @return
      */
@@ -39,14 +38,32 @@ public class Problem674 {
         return maxLen;
     }
 
+    public int findLengthOfLCISV2(int[] nums) {
+        //i位置的最长连续子数组长度
+        int[] dp = new int[nums.length];
+        dp[0] = 1;
+        int maxLen = dp[0];
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] > nums[i - 1]) {
+                dp[i] = dp[i - 1] + 1;
+            } else {
+                dp[i] = 1;
+            }
+            if (dp[i] > maxLen) {
+                maxLen = dp[i];
+            }
+        }
+        return maxLen;
+    }
+
     @Test
     public void test() {
-        int[] nums = new int[] {1, 3, 5, 4, 7};
-        int max = solution.findLengthOfLCIS(nums);
+        int[] nums = new int[]{1, 3, 5, 4, 7};
+        int max = solution.findLengthOfLCISV2(nums);
         Assert.assertEquals(max, 3);
 
-        nums = new int[] {2, 2, 2, 2, 2};
-        max = solution.findLengthOfLCIS(nums);
+        nums = new int[]{2, 2, 2, 2, 2};
+        max = solution.findLengthOfLCISV2(nums);
         Assert.assertEquals(max, 1);
     }
 }
