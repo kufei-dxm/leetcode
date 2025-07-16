@@ -31,7 +31,6 @@ public class Problem236A {
                 node = pPath.get(i);
             }
         }
-        System.out.println(node.val);
         return node;
     }
 
@@ -51,6 +50,21 @@ public class Problem236A {
             path.remove(root);
             return false;
         }
+    }
+
+    public TreeNode lowestCommonAncestorV2(TreeNode root, TreeNode p, TreeNode q) {
+        if (root == null || root.val == p.val || root.val == q.val) {
+            return root;
+        }
+        TreeNode left = lowestCommonAncestorV2(root.left, p, q);
+        TreeNode right = lowestCommonAncestorV2(root.right, p, q);
+        if (left != null && right != null) {
+            return root;
+        }
+        if (left != null) {
+            return left;
+        } else
+            return right;
     }
 
     @Test

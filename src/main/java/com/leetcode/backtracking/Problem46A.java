@@ -43,6 +43,13 @@ public class Problem46A {
     @Test
     public void test() {
         int[] nums = new int[]{1, 2, 3};
-        solution.permute(nums);
+        List<List<Integer>> result = solution.permute(nums);
+        for (List<Integer> list: result){
+            System.out.print("[");
+            for (Integer item: list){
+                System.out.print(item+",");
+            }
+            System.out.print("]");
+        }
     }
 }

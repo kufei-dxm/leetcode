@@ -69,6 +69,9 @@ public class Problem17A {
     }
 
     public List<String> letterCombinations(String digits) {
+        if(digits.isEmpty()){
+            return new ArrayList<>();
+        }
         List<String> result = new ArrayList<>();
         backtrace(digits, 0, "", result);
         return result;
